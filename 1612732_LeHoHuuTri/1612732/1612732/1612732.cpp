@@ -7,7 +7,8 @@
 #include"BillList.h"
 #include"Guest.h"
 #include"User.h"
-
+#include"Author.h"
+#include"Publisher.h"
 int main()
 {
 	//tuan 2
@@ -20,12 +21,12 @@ int main()
 	//cout << "Price: " << book.getPrice() << endl;
 
 	//tao list
-	Book book1("Huong doi tuong", "s1", 23000);
-	Book book2("Huong doi tuong", "s2", 45000);
-	Book book3("Nhap mon lap trinh", "s3", 56000);
-	Book book4("Co so du lieu", "s4", 67000);
-	Book book5("Ky thuat lap trinh", "s5", 80000);
-	Book book6("Nhap mon thuat toan", "s6", 90000);
+	Book book1("Huong doi tuong", "s1", 23000, "Le Ho Huu Tri", "Kim dong");
+	Book book2("Huong doi tuong", "s2", 45000, "Le Ho Huu Tri", "Giao duc");
+	Book book3("Nhap mon lap trinh", "s3", 56000, "Dang Binh Phuong", "Kim dong");
+	Book book4("Co so du lieu", "s4", 67000, "Dang Binh Phuong", "Giao duc");
+	Book book5("Ky thuat lap trinh", "s5", 80000, "Le Ho Huu Tri", "Kim dong");
+	Book book6("Nhap mon thuat toan", "s6", 90000, "Le Ho Huu Tri", "Kim dong");
 	vector<Book> ls;
 	ls.push_back(book1);
 	ls.push_back(book2);
@@ -35,7 +36,7 @@ int main()
 	ls.push_back(book6);
 	BookList list(ls);
 	list.outputListBook();
-
+	
 	//tuan 3
 	//list.delete_update_book();
 
@@ -49,7 +50,7 @@ int main()
 	billLS.editQuanityBill(list);*/
 
 	//tuan 7
-	Guest guest1;
+	/*Guest guest1;
 	Book result = guest1.search(list);
 	result.outputBook();
 	int option;
@@ -70,10 +71,16 @@ int main()
 			user1.buy(list).outputBillList();
 		}
 
-	}
+	}*/
 	
-	
-
+	//tuan 8
+	Author author("Le Ho Huu Tri", "spectertri", 0);
+	//author.add(list).outputListBook();
+	//author.del(list).outputListBook();
+	//author.update(list).outputListBook(); 
+	//author.edit(list).outputListBook();
+	Publisher pub("Kim dong", "spectertri", 0);
+	pub.edit(list).outputListBook();
 	return 0;
 }
 

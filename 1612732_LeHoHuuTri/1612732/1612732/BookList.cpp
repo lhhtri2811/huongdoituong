@@ -66,10 +66,12 @@ void BookList::delete_update_book()
 		{
 			string s1 = _bookList[temp].getName();
 			string s2= _bookList[temp].getID();
+			string s3 = _bookList[temp].getAuthor();
+			string s4 = _bookList[temp].getPublisher();
 			int newPrice;
 			cout << "Gia moi: ";
 			cin >> newPrice;
-			Book book(s1, s1, newPrice);
+			Book book(s1, s2, newPrice, s3, s4);
 			_bookList[temp] = book;
 			outputListBook();
 		}
@@ -115,10 +117,12 @@ void BookList::delete_update_book()
 		{
 			string s1 = _bookList[temp2].getName();
 			string s2 = _bookList[temp2].getID();
+			string s3 = _bookList[temp].getAuthor();
+			string s4 = _bookList[temp].getPublisher();
 			int newPrice;
 			cout << "Gia moi: ";
 			cin >> newPrice;
-			Book book(s1, s1, newPrice);
+			Book book(s1, s2, newPrice, s3, s4);
 			_bookList[temp2] = book;
 			outputListBook();
 		}
@@ -164,6 +168,26 @@ Book BookList::searchBook()
 		}
 		return Book(_bookList[temp2]);
 	}
+}
+
+void BookList::setBookList(vector<Book> list)
+{
+	this->_bookList = list;
+}
+
+vector<Book> BookList::getBookList()
+{
+	return this->_bookList;
+}
+
+void BookList::add(Book book)
+{
+	this->_bookList.push_back(book);
+}
+
+int BookList::getSize()
+{
+	return _bookList.size();
 }
 
 BookList::BookList(const vector<Book>& other)

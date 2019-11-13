@@ -152,19 +152,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1612732.cpp" />
+    <ClCompile Include="Author.cpp" />
     <ClCompile Include="Bill.cpp" />
     <ClCompile Include="BillList.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="BookList.cpp" />
     <ClCompile Include="Guest.cpp" />
+    <ClCompile Include="Publisher.cpp" />
     <ClCompile Include="User.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Author.h" />
     <ClInclude Include="Bill.h" />
     <ClInclude Include="BillList.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="BookList.h" />
     <ClInclude Include="Guest.h" />
+    <ClInclude Include="Publisher.h" />
     <ClInclude Include="User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
